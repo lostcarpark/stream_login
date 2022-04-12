@@ -1,0 +1,9 @@
+stream_login.login:
+  title: Login to Streaming
+  route_name: stream_login
+  weight: 1
+
+stream_login.config:
+  title: Stream Login Configuration
+  route_name: stream_login_config
+  weight: 12

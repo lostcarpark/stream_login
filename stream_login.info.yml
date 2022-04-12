@@ -1,0 +1,4 @@
+name: Stream Login
+type: module
+description: 'Add on for ConReg to log members into streaming pages.'
+core_version_requirement: ^8.8 || ^9

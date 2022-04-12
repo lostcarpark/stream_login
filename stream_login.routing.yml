@@ -1,0 +1,28 @@
+stream_login:
+  path: 'stream/login'
+  defaults:
+    _title: 'Login to Streaming'
+    _form: '\Drupal\stream_login\Form/StreamLoginForm'
+  requirements:
+    _access: 'TRUE'
+
+stream_login_complete:
+  path: 'stream/login/{mid}/{key}/{expiry}'
+  defaults:
+    _title: 'Login'
+    _controller: '\Drupal\simple_conreg\SimpleConregController::memberLoginAndRedirect'
+  requirements:
+    _access: 'TRUE'
+    mid: ^[0-9]+$
+    key: ^[0-9]+$
+    expiry: ^[0-9]+$
+  options:
+    no_cache: 'TRUE'
+
+stream_login_config:
+  path: 'admin/config/stream_login'
+  defaults:
+    _title: 'Stream Login Configuration'
+    _form: '\Drupal\stream_login\Form\StreamLoginConfigForm'
+  requirements:
+    _permission: 'configure stream login'
